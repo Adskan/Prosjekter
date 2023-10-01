@@ -10,7 +10,7 @@ Her brukte vi kotlin og jetpack compose til å designe appen.
 Dette ble en foto-planleggingsapp.
 
 ### Mål bak oppgave
-Hoved-poenget bak oppgaven var å sjekke om dagens telefoner var kraftige nok til å kalkulere lokalt soloppgang, solnedgang og når solen står høyest, uten å gjøre api-kall. Vi fikk til ca. 3 min persisjon på dette, og var svært fornøyde med resulatet. Vi ville rette denne appen mot fotografer slik at de kunne planlegge shoots i forhold til lys-forhold. 
+Hoved-poenget bak oppgaven var å sjekke om dagens telefoner var kraftige nok til å kalkulere lokalt i realtime tidene for soloppgang, solnedgang og når solen står høyest, uten å gjøre api-kall. Vi fikk til ca. 3 min persisjon på dette, og var svært fornøyde med resulatet. Vi ville rette denne appen mot fotografer slik at de kunne planlegge shoots i forhold til lys-forhold. 
 Vi la til muligheter for å opprette "Shoots", eller da events hvor man skulle ta bilder og sette tidspunkt for dette, samt. muligheten til å gruppere de
 
 ### AR-funksjonalitet
