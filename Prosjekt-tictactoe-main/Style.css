@@ -1,0 +1,42 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    Background-color: black;
+    Color: rgb(0, 0, 0);
+    width: 900px;
+    margin: 10px auto;
+   
+    
+
+}
+
+.grid-cell{
+    width: 270px;
+    height: 270px;
+    float: left;
+    cursor: pointer;
+    Background-color: rgb(183, 183, 183);
+    font-size: 150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+ 
+    
+}
+.button-solid{
+    background-color: rgb(183, 183, 183);
+    padding-left: none;
+    padding-right: none;
+    
+}
+.endText{
+    text-align: center;
+    font-size: 100px;
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
