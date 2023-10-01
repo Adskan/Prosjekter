@@ -1,0 +1,58 @@
+package com.example.sunandmoon.ui.theme
+
+import android.app.Activity
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.lightColorScheme
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.ViewCompat
+
+// Not used
+
+
+private val LightColorScheme = lightColorScheme(
+    primary = SecondaryColor,
+    secondary = InfoBlueColor,
+    tertiary = TernaryColor,
+
+    background = PrimaryColor,
+    surface = SecondaryColor,
+    onPrimary = OnSecondaryColor,
+    onSecondary = PrimaryColor,
+    onTertiary = SecondaryColor,
+    onBackground = PrimaryColor,
+    onSurface = SecondaryColor,
+)
+
+@Composable
+fun SunAndMoonTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    // Dynamic color is available on Android 12+
+    
+    content: @Composable () -> Unit
+) {
+    val colorScheme = LightColorScheme /*when {
+        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+            val context = LocalContext.current
+            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+        }
+        darkTheme -> DarkColorScheme
+        else -> LightColorScheme
+    }*/
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            (view.context as Activity).window.statusBarColor = colorScheme.background.toArgb()
+            ViewCompat.getWindowInsetsController(view)?.isAppearanceLightStatusBars = darkTheme
+        }
+    }
+
+    MaterialTheme(
+        colorScheme = colorScheme,
+        typography = Typography,
+        content = content,
+    )
+}
